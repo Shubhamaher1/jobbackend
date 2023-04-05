@@ -1,8 +1,13 @@
 
 const express = require("express");
 const app = express();
-
+const cors= require("cors");
+var corsOption ={
+  origin: "*"
+};
+app.use(cors(corsOption));
 app.use(express.json());
+
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';
 
